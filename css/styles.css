@@ -183,6 +183,7 @@ body {
 }
 .button.primary{
     padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:hover, .button:focus{
     color: var(--primary-text);
@@ -197,9 +198,12 @@ body {
     line-height: 1.62;
     letter-spacing: 0.03em;
 }
-.button.secondary:hover, .button.secondary:focus, .secondary.activ{
+.button.secondary:hover, 
+.button.secondary:focus, 
+.secondary.activ{
     color: var(--white);
     background-color: var(--accent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -423,6 +427,13 @@ footer{
     padding-bottom: 60px;
     background-color: var(--secondary-bg);
 }
+footer .container{
+    display: flex;
+    align-items: baseline;
+}
+footer .group-nav:not(:last-child){
+    margin-right: 70px;
+}
 footer .logo{
     
     color: var(--white);
@@ -448,7 +459,30 @@ footer .logo{
 .footer-nav .adress{
     color: var(--white);
 }
+.social-list .title{
+    margin: 0;
+    margin-bottom: 20px;
 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.social-list .social{
+    justify-content:flex-start;
+}
+.social-list .item:not(:last-child){
+    margin-right: 10px;
+}
+.social-list .link{
+    background: rgba(255, 255, 255, 0.1);
+}
+.social-list .svg{
+    fill: var(--white);
+}
 
 
 /* page Portfolio */
@@ -490,6 +524,10 @@ footer .logo{
 
 .portfolios .link{
     text-decoration: none;
+}
+.portfolios .portfolio:hover, 
+.portfolios .portfolio:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolios .title{
     margin-top: 0;
